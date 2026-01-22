@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HTML + CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Mastering Flexbox</h1>
+    <p>Explore different flexbox properties by observing the containers below.</p>
+
+    <h2>1. Justify Content: Center (Main Axis)</h2>
+    <div class="flex-container justify-center">
+      <div class="box">Item 1</div>
+      <div class="box">Item 2</div>
+    </div>
+
+    <h2>2. Align Items: Center (Cross Axis)</h2>
+    <div class="flex-container big-container align-center">
+      <div class="box">Item 1</div>
+      <div class="box">Item 2</div>
+    </div>
+
+    <h2>3. Perfect Centering (Combined)</h2>
+    <div class="flex-container big-container center-both">
+      <div class="box">Centered Box 1</div>
+      <div class="box">Centered Box 2</div>
+    </div>
+
+    <h2>4. Flex: 1 (Growth)</h2>
+    <div class="flex-container">
+      <div class="box flex-1">Flex: 1</div>
+      <div class="box flex-1">Flex: 1</div>
+      <div class="box flex-1">Flex: 1</div>
+    </div>
+
+    <h2>5. Flex Direction & Wrap</h2>
+    <div class="flex-container wrap-demo">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+
+    <h2>6. Flex Grow & Basis</h2>
+    <div class="flex-container">
+      <div class="box grow-1">Grow 1</div>
+      <div class="box grow-2">Grow 2</div>
+      <div class="box">Standard</div>
+    </div>
+    <h2>7. Row Reverse</h2>
+    <div class="flex-container row-reverse">
+      <div class="box">Item 1 (Start)</div>
+      <div class="box">Item 2</div>
+      <div class="box">Item 3 (End)</div>
+    </div>
+
+    <h2>8. Wrap Reverse</h2>
+    <div class="flex-container wrap-demo wrap-reverse">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+
+    <h2>9. Align Content (Multi-line)</h2>
+    <div class="flex-container big-container wrap-demo content-between">
+      <div class="box">Row 1</div>
+      <div class="box">Row 1</div>
+      <div class="box">Row 2</div>
+      <div class="box">Row 2</div>
+    </div>
+
+    <h2>10. Align Self & Order</h2>
+    <div class="flex-container big-container">
+      <div class="box self-start">Self: Start</div>
+      <div class="box self-center order-last">Self: Center (Order: last)</div>
+      <div class="box self-end order-first">Self: End (Order: first)</div>
+    </div>
+
+    <h2>11. List with Grow</h2>
+    <div class="flex-container big-container justify-center items-center">
+      <div class="box grow-1">Apple</div>
+      <div class="box grow-2">Orange</div>
+      <div class="box grow-3">Mango</div>
+    </div>
+  </main>
+</body>
+
+</html>
