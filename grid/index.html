@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Grid + Bento Grids</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>CSS Grid + Bento Grids</h1>
+
+    <section>
+      <h2>Example 1: Basic grid (3 columns)</h2>
+      <div class="grid basic">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 2: Responsive grid (auto-fit + minmax)</h2>
+      <div class="grid responsive">
+        <div class="box">Card A</div>
+        <div class="box">Card B</div>
+        <div class="box">Card C</div>
+        <div class="box">Card D</div>
+        <div class="box">Card E</div>
+        <div class="box">Card F</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 3: Spans (grid-column / grid-row)</h2>
+      <div class="grid spans">
+        <div class="box hero">Hero (span 2 cols and 3 rows)</div>
+        <div class="box">Small</div>
+        <div class="box">Small</div>
+        <div class="box tall">Tall (span 2 rows)</div>
+        <div class="box">Small</div>
+        <div class="box">Small</div>
+        <div class="box">Small</div>
+        <div class="box">Small</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 4: Bento (named areas)</h2>
+      <div class="grid bento-areas">
+        <div class="box a-hero">Hero</div>
+        <div class="box a-notes">Notes</div>
+        <div class="box a-cta">CTA</div>
+        <div class="box a-mini">Mini</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 5: Bento (12-column spans)</h2>
+      <div class="grid bento-12">
+        <div class="box span-6">Span 6</div>
+        <div class="box span-3">Span 3</div>
+        <div class="box span-3">Span 3</div>
+        <div class="box span-4">Span 4</div>
+        <div class="box span-8">Span 8</div>
+        <div class="box span-5">Span 5</div>
+        <div class="box span-7">Span 7</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 6: justify-content (Container Alignment)</h2>
+      <p>Centers the <strong>entire grid</strong> horizontally within its parent. Only works when the grid's total width is less than the container's width (using fixed 100px columns here).</p>
+      <div class="grid align-container justify-content-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 7: justify-items (Item Alignment)</h2>
+      <p>Aligns <strong>items</strong> horizontally <em>inside</em> their grid cells. Items are pushed to the end of each cell.</p>
+      <div class="grid align-container justify-items-center">
+        <div class="box short">Center</div>
+        <div class="box short">Center</div>
+        <div class="box short">Center</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 8: align-content (Container Alignment)</h2>
+      <p>Centers the <strong>entire grid</strong> vertically within its parent. Only works when the grid's total height is less than the container's height.</p>
+      <div class="grid align-container align-content-center">
+        <div class="box short">1</div>
+        <div class="box short">2</div>
+        <div class="box short">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 9: align-items (Item Alignment)</h2>
+      <p>Aligns <strong>items</strong> vertically <em>inside</em> their grid cells. Items are centered vertically within their own 100px-high cells.</p>
+      <div class="grid align-container align-items-center" style="grid-auto-rows: 100px;">
+        <div class="box short">Center</div>
+        <div class="box short">Center</div>
+        <div class="box short">Center</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 10: place-items (Item Alignment Shorthand)</h2>
+      <p>Centers <strong>items</strong> both horizontally and vertically <em>inside</em> their grid cells.</p>
+      <div class="grid align-container place-items-center" style="grid-auto-rows: 100px;">
+        <div class="box short">Centered</div>
+        <div class="box short">Centered</div>
+        <div class="box short">Centered</div>
+      </div>
+    </section>
+<section>
+  <h2>Example 11: auto-fill (Creates Empty Tracks)</h2>
+  <p><strong>auto-fill</strong> creates as many grid tracks as will fit in the container, <em>including empty
+      tracks</em>. Empty tracks are created even if there are no items to fill them. This is useful when you want to
+    maintain consistent spacing.</p>
+  <div class="grid auto-fill-demo">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+  <p class="note">💡 Notice: With only 4 items, auto-fill creates empty tracks on the right. Items don't stretch to fill
+    the container width.</p>
+</section>
+
+<section>
+  <h2>Example 12: auto-fit (Collapses Empty Tracks)</h2>
+  <p><strong>auto-fit</strong> creates as many grid tracks as will fit, but <em>collapses empty tracks to zero</em>.
+    This allows the existing items to stretch and fill the available space.</p>
+  <div class="grid auto-fit-demo">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+  <p class="note">💡 Notice: With only 4 items, auto-fit collapses empty tracks. Items stretch to fill the entire
+    container width.</p>
+</section>
+
+<section>
+  <h2>🔍 Key Difference Summary</h2>
+  <div class="comparison-box">
+    <div class="comparison-item">
+      <h3>auto-fill</h3>
+      <ul>
+        <li>Creates empty tracks</li>
+        <li>Maintains track count</li>
+        <li>Items stay at minimum size</li>
+        <li>Use when: You want consistent grid structure regardless of item count</li>
+      </ul>
+    </div>
+    <div class="comparison-item">
+      <h3>auto-fit</h3>
+      <ul>
+        <li>Collapses empty tracks</li>
+        <li>Reduces track count</li>
+        <li>Items expand to fill space</li>
+        <li>Use when: You want items to grow and fill available space</li>
+      </ul>
+    </div>
+  </div>
+</section>
+  </body>
+</html>

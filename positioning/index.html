@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Positioning Breakdown</h1>
+        <p>A simple guide to <code>relative</code>, <code>absolute</code>, and <code>fixed</code> positioning.</p>
+    </header>
+
+    <main>
+        <!-- 1. Relative Positioning -->
+        <section class="demo-section">
+            <h2>1. Relative Positioning</h2>
+            <p>The element is positioned relative to its normal document flow. It keeps its original space.</p>
+            <div class="box-container">
+                <div class="box static">Static</div>
+                <div class="box relative">Relative (Moved!)</div>
+                <div class="box static">Static</div>
+            </div>
+        </section>
+
+        <!-- 2. Absolute Positioning -->
+        <section class="demo-section">
+            <h2>2. Absolute Positioning</h2>
+            <p>The element is removed from the document flow and positioned relative to its nearest <strong>positioned</strong> ancestor.</p>
+            <div class="box-container absolute-parent">
+                <div class="box static">Static</div>
+                <div class="box absolute">Absolute</div>
+                <div class="box static">Static</div>
+                <p class="note">Notice how the static boxes jumped to fill the gap.</p>
+            </div>
+        </section>
+
+        <!-- 3. Fixed Positioning -->
+        <section class="demo-section">
+            <h2>3. Fixed Positioning</h2>
+            <p>The element is positioned relative to the browser window (viewport). It stays in the same place even when you scroll.</p>
+            <div class="box fixed">Fixed Box</div>
+            <div class="scroll-filler">
+                <p>Scroll down to see the fixed box stay in place...</p>
+                <div class="filler-line"></div>
+                <div class="filler-line"></div>
+                <div class="filler-line"></div>
+                <div class="filler-line"></div>
+                <div class="filler-line"></div>
+            </div>
+        </section>
+
+        <!-- 4. Sticky Positioning -->
+        <section class="demo-section">
+            <h2>4. Sticky Positioning</h2>
+            <p>The element toggles between relative and fixed, depending on the scroll position. It sticks to a specific offset within its container.</p>
+            <div class="sticky-container">
+                <div class="box sticky">Sticky Box</div>
+                <div class="scroll-content">
+                    <p>Scroll inside this box to see the sticky behavior in action...</p>
+                    <p>Cats are fascinating creatures that have been companions to humans for thousands of years. Domesticated cats,
+                        scientifically known as Felis catus, are small carnivorous mammals that belong to the family Felidae. These
+                        remarkable animals have captured the hearts of millions of people around the world with their independent yet
+                        affectionate nature.</p>
+                    <p>The history of cats and their relationship with humans dates back approximately 9,000 years to ancient civilizations
+                        in the Near East. Archaeological evidence suggests that cats were first domesticated in the Fertile Crescent, where
+                        they helped protect grain stores from rodents. Ancient Egyptians particularly revered cats, considering them sacred
+                        animals and even mummifying them alongside their owners.</p>
+                    <p>Cats possess incredible physical abilities that make them exceptional hunters. Their flexible bodies contain 230
+                        bones, which is about 24 more than humans have. This skeletal structure, combined with powerful muscles, allows cats
+                        to twist and turn with remarkable agility. They can rotate their ears 180 degrees to pinpoint the source of sounds,
+                        and their eyes contain a special reflective layer called the tapetum lucidum that enhances their night vision,
+                        making them excellent nocturnal predators.</p>
+                    <p>One of the most distinctive features of cats is their retractable claws. Unlike dogs, cats can extend and retract
+                        their claws at will, keeping them sharp for climbing, hunting, and self-defense. This unique adaptation also allows
+                        them to move silently when stalking prey. Cats are obligate carnivores, meaning their bodies are designed to derive
+                        nutrients primarily from animal tissue rather than plant material.</p>
+                    <p>Communication in cats is a complex system involving vocalizations, body language, and scent marking. While cats can
+                        produce over 100 different vocal sounds compared to dogs' mere 10, they primarily communicate through body language.
+                        A cat's tail position, ear orientation, and pupil dilation can convey a wide range of emotions from contentment to
+                        fear or aggression. Purring, perhaps the most recognizable cat sound, typically indicates contentment but can also
+                        occur when cats are stressed or in pain.</p>
+                    <p>Domestic cats come in an astounding variety of breeds, colors, and patterns. From the hairless Sphynx to the
+                        luxuriously fluffy Persian, from the spotted Bengal to the color-pointed Siamese, there's a cat breed to suit almost
+                        every preference. Each breed has its own unique characteristics, temperament, and care requirements. Some breeds are
+                        known for being particularly vocal, like the Siamese, while others like the Russian Blue tend to be quieter and more
+                        reserved.</p>
+                    <p>Cats spend a significant portion of their lives sleeping, averaging 12 to 16 hours per day, with some cats sleeping
+                        up to 20 hours. This extensive sleep pattern is an evolutionary adaptation from their wild ancestors, who needed to
+                        conserve energy between hunts. Cats experience both REM and non-REM sleep cycles, and they do dream, often twitching
+                        their whiskers, paws, and tails during deep sleep phases.</p>
+                    <p>The grooming behavior of cats is not just about cleanliness; it serves multiple purposes including temperature
+                        regulation, stress relief, and social bonding. Cats have barbed tongues covered in tiny hook-like structures called
+                        papillae that act like a comb, removing loose fur and debris. When cats groom each other, a behavior called
+                        allogrooming, it strengthens social bonds and helps them establish group scent.</p>
+                    <p>Understanding cat behavior and body language is essential for building a strong relationship with these independent
+                        animals. A slow blink from a cat is often called a "cat kiss" and indicates trust and affection. When a cat kneads
+                        with their paws, alternating between left and right, they're displaying a behavior from kittenhood when they would
+                        knead their mother's belly to stimulate milk flow. This behavior in adult cats typically indicates contentment and
+                        comfort.</p>
+                    <p>Modern cat care has evolved significantly, with advances in veterinary medicine, nutrition, and our understanding of
+                        feline behavior. Regular veterinary check-ups, proper nutrition, environmental enrichment, and mental stimulation
+                        are all crucial for maintaining a healthy and happy cat. Indoor cats typically live longer than outdoor cats, with
+                        lifespans ranging from 12 to 18 years or even longer with proper care.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CSS Demo</p>
+    </footer>
+</body>
+</html>
